@@ -24,7 +24,7 @@ If the answer is not in the context, say so clearly — do not guess.
 Always cite the source document and page number when available."""
 
 # ── Retrieval settings ────────────────────────────────────────
-TOP_K           = 25             # number of chunks retrieved per query
+TOP_K           = 15             # number of chunks retrieved per query
 CHUNK_SIZE      = 800           # words per chunk
 CHUNK_OVERLAP   = 200            # word overlap between chunks
 
