@@ -9,11 +9,12 @@ APP_SHORT_NAME  = "DA"          # 2-letter initials shown in the UI header
 
 # ── LLM provider ─────────────────────────────────────────────
 # Options: "claude" | "gemini"
-LLM_PROVIDER    = "claude/ gemini"
+LLM_PROVIDER    = "gemini"                  # either "claude" or "gemini"
+
 
 # Claude models:  claude-sonnet-4-20250514 | claude-opus-4-20250514 | claude-haiku-4-5-20251001
 # Gemini models:  gemini-2.0-flash | gemini-1.5-pro | gemini-1.5-flash
-LLM_MODEL       = "model_name"
+LLM_MODEL       = "gemini-2.5-flash"
 
 # ── System prompt ─────────────────────────────────────────────
 # Tell the LLM who it is and how to behave.
