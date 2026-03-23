@@ -101,7 +101,6 @@ rag/
 
 | Use case | `APP_NAME` | `SYSTEM_PROMPT` hint |
 |---|---|---|
-| Aviation maintenance | ATCL Maintenance Assistant | Cite AMM/MEL page numbers |
 | Legal contracts | Contract Review Tool | Flag obligations and deadlines |
 | HR policies | HR Policy Assistant | Be friendly, cite policy section |
 | Medical guidelines | Clinical Reference | Always recommend consulting a doctor |
