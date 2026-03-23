@@ -234,8 +234,14 @@ header{
   font-family:var(--mono);
   font-size:13px;line-height:1.9;
   color:var(--ink2);
-  white-space:pre-wrap;
   padding-left:2px;
+}
+
+.msg-bubble p{
+  margin-bottom:1em;
+}
+.msg-bubble p:last-child{
+  margin-bottom:0;
 }
 
 .msg.user .msg-bubble{
@@ -451,7 +457,8 @@ function addMsg(role,text,sources){
     div.className='msg bot thinking';
     bubble.innerHTML='Searching documents<span class="cursor-blink"></span>';
   } else {
-    bubble.textContent=text;
+    const paras = text.split(/\n\n+/);
+    bubble.innerHTML = paras.map(p => `<p>${p.replace(/\n/g,'<br>')}</p>`).join('');
   }
 
   div.appendChild(hdr);
