@@ -14,12 +14,22 @@ from google import genai
 
 client = genai.Client(api_key=os.environ.get("GEMINI_API_KEY"))
 
+def strip_markdown(text: str) -> str:
+    """Remove markdown formatting so output reads as clean plain text."""
+    text = re.sub(r'\*{1,3}(.+?)\*{1,3}', r'\1', text)
+    text = re.sub(r'_{1,3}(.+?)_{1,3}', r'\1', text)
+    text = re.sub(r'^#{1,6}\s+', '', text, flags=re.MULTILINE)
+    text = re.sub(r'^\s*[\*\-]\s+', '  - ', text, flags=re.MULTILINE)
+    text = re.sub(r'`(.+?)`', r'\1', text)
+    text = re.sub(r'^[-\*]{3,}\s*$', '', text, flags=re.MULTILINE)
+    text = re.sub(r'\n{3,}', '\n\n', text)
+    return text.strip()
+
 from sentence_transformers import SentenceTransformer
 import faiss
 
 from config import (INDEX_DIR, TOP_K, LLM_PROVIDER, LLM_MODEL,
                     SYSTEM_PROMPT, APP_NAME, EMBED_MODEL)
-
 
 def _get_llm_client():
     if LLM_PROVIDER == "claude":
