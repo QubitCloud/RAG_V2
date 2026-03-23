@@ -5,14 +5,21 @@ Retrieval + LLM call. Provider (Claude or Gemini) is chosen from config.py.
 Don't edit this file — change config.py instead.
 """
 
-import os
 import json
+import os
+import re
 import pickle
 from pathlib import Path
-import os
 from google import genai
 
 client = genai.Client(api_key=os.environ.get("GEMINI_API_KEY"))
+
+from sentence_transformers import SentenceTransformer
+import faiss
+
+from config import (INDEX_DIR, TOP_K, LLM_PROVIDER, LLM_MODEL,
+                    SYSTEM_PROMPT, APP_NAME, EMBED_MODEL)
+
 
 def strip_markdown(text: str) -> str:
     """Remove markdown formatting so output reads as clean plain text."""
@@ -25,11 +32,6 @@ def strip_markdown(text: str) -> str:
     text = re.sub(r'\n{3,}', '\n\n', text)
     return text.strip()
 
-from sentence_transformers import SentenceTransformer
-import faiss
-
-from config import (INDEX_DIR, TOP_K, LLM_PROVIDER, LLM_MODEL,
-                    SYSTEM_PROMPT, APP_NAME, EMBED_MODEL)
 
 def _get_llm_client():
     if LLM_PROVIDER == "claude":
@@ -46,11 +48,11 @@ def _call_llm(client, system: str, user: str) -> str:
     if LLM_PROVIDER == "claude":
         resp = client.messages.create(
             model=LLM_MODEL,
-            max_tokens=1024,
+            max_tokens=6144,
             system=system,
             messages=[{"role": "user", "content": user}],
         )
-        return resp.content[0].text
+        return strip_markdown(resp.content[0].text)
 
     elif LLM_PROVIDER == "gemini":
         from google.genai import types
@@ -59,11 +61,11 @@ def _call_llm(client, system: str, user: str) -> str:
             contents=user,
             config=types.GenerateContentConfig(
                 system_instruction=system,
-                max_output_tokens=6114,
+                max_output_tokens=6144,
                 temperature=0.2,
             ),
         )
-        return resp.text
+        return strip_markdown(resp.text)
 
 
 class RAGEngine:
