@@ -9,11 +9,11 @@ APP_SHORT_NAME  = "DA"          # 2-letter initials shown in the UI header
 
 # ── LLM provider ─────────────────────────────────────────────
 # Options: "claude" | "gemini"
-LLM_PROVIDER    = "gemini"
+LLM_PROVIDER    = "claude/ gemini"
 
 # Claude models:  claude-sonnet-4-20250514 | claude-opus-4-20250514 | claude-haiku-4-5-20251001
 # Gemini models:  gemini-2.0-flash | gemini-1.5-pro | gemini-1.5-flash
-LLM_MODEL       = "gemini-2.5-flash"
+LLM_MODEL       = "model_name"
 
 # ── System prompt ─────────────────────────────────────────────
 # Tell the LLM who it is and how to behave.
@@ -21,7 +21,8 @@ LLM_MODEL       = "gemini-2.5-flash"
 SYSTEM_PROMPT = """You are a helpful document assistant for {app_name}.
 Answer questions strictly based on the provided document context.
 If the answer is not in the context, say so clearly — do not guess.
-Always cite the source document and page number when available."""
+Always cite the source document and page number when available.
+Write in plain text only. Do not use markdown, asterisks, bullet symbols, or any formatting characters."""
 
 # ── Retrieval settings ────────────────────────────────────────
 TOP_K           = 15             # number of chunks retrieved per query
