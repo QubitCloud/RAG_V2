@@ -13,7 +13,7 @@ Everything customisable lives there:
 APP_NAME       = "My Document Assistant"   # shown in the UI
 APP_SHORT_NAME = "DA"                      # 2-letter initials in header
 
-LLM_PROVIDER   = "claude"                  # "claude" or "gemini"
+LLM_PROVIDER   = "claude/ gemini"                  # "claude" or "gemini"
 LLM_MODEL      = "claude-sonnet-4-20250514"
 
 SYSTEM_PROMPT  = "You are a helpful assistant for {app_name}..."
