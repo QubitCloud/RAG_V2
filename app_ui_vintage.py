@@ -442,7 +442,7 @@ function addMsg(role,text,sources){
 
   const lbl=document.createElement('div');
   lbl.className='msg-label';
-  lbl.textContent = role==='user' ? 'Query' : role==='bot' ? 'Response' : 'Error';
+  lbl.textContent = role==='user' ? 'Query' : (role==='bot'||role==='thinking') ? 'Response' : 'Error';
 
   const line=document.createElement('div');
   line.className='msg-line';
