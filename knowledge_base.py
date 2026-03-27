@@ -808,6 +808,108 @@ ENTRIES = [
         ],
     },
 
+    # ── CHARITABLE ORGANIZATIONS ──────────────────────────────────────────────
+
+    {
+        "topic": "Charitable Organisation — Application for Private Ruling",
+        "content": (
+            "A non-government organisation (NGO) or religious organisation may apply to the "
+            "Commissioner General to be recognised as a charitable organisation. "
+            "Qualifying criteria — the organisation must be an entity of a public character "
+            "established and functioning solely for one or more of: "
+            "(i) Relief of poverty or distress of the public; "
+            "(ii) Environmental protection; "
+            "(iii) Advancement of education or health; "
+            "(iv) Provision of general public health, education, water, or road construction/maintenance. "
+            "Where to apply: Submit the application to the Regional Manager at the TRA regional office "
+            "where the organisation is registered. "
+            "Documents required: "
+            "(1) Copy of registration certificate/status. "
+            "(2) Copy of the organisation's constitution and performance report. "
+            "(3) Copy of introduction letter from the District Commissioner where the organisation operates. "
+            "(4) Copy of TIN certificate. "
+            "(5) Copies of financial statements for at least the three most recent years. "
+            "Important: Being ruled as a charitable organisation by the Commissioner does NOT grant "
+            "automatic tax exemption or relieve the organisation from any filing obligations under "
+            "tax law. It only provides a different method of calculating tax payable."
+        ),
+        "keywords": [
+            "charitable", "charity", "ngo", "religious", "organisation", "private ruling",
+            "commissioner general", "tax exemption", "poverty", "education", "health",
+            "environmental", "water", "road", "public character", "charitable organisation",
+        ],
+    },
+
+    # ── INTEREST, PENALTIES & OFFENCES ───────────────────────────────────────
+
+    {
+        "topic": "Interest — Underestimating Provisional Tax and Failure to Pay",
+        "content": (
+            "1. Interest for underestimating provisional (instalment) tax: "
+            "Applies where an instalment payer's estimate or revised estimate of income tax payable "
+            "for a year of income (under Section 88 of the Income Tax Act) is less than 80% of the "
+            "correct amount. Interest is calculated at the statutory rate, compounded monthly, "
+            "on the difference between what should have been paid in instalments and what was actually paid. "
+            "Interest runs from the date the first instalment was due until the due date for filing "
+            "the final income tax return under Section 91(1) of the Income Tax Act. "
+            "2. Interest for failure to pay tax: "
+            "If any amount of tax imposed under any tax law remains unpaid after the due date, "
+            "interest is charged at the statutory rate on the outstanding tax amount."
+        ),
+        "keywords": [
+            "interest", "underestimate", "provisional tax", "instalment", "80%",
+            "section 88", "section 91", "statutory rate", "compounded", "failure to pay",
+            "outstanding tax", "late payment",
+        ],
+    },
+
+    {
+        "topic": "Penalties — Failure to Maintain Documents, File Returns, or False Statements",
+        "content": (
+            "1. Failure to maintain documents: "
+            "Penalty applies for each month (or part month) the failure continues. "
+            "Individual: 1 currency point per month. Body corporate: 10 currency points per month. "
+            "2. Failure to file a tax return or pay tax on time: "
+            "Penalty is the higher of: "
+            "(a) 2.5% of the tax assessed for that return less tax already paid; OR "
+            "(b) Individual: 5 currency points; Body corporate: 15 currency points. "
+            "Penalties apply separately for failure to file an estimate/provisional return "
+            "and for failure to file a final return. "
+            "3. False or misleading statements: "
+            "Without reasonable excuse: 50% of the tax shortfall. "
+            "Made knowingly or recklessly: 100% of the tax shortfall, or 30% of the adjusted loss. "
+            "Adjustments: The penalty increases by 10% for a second or subsequent offence. "
+            "The penalty is reduced by 10% if the person voluntarily discloses the false statement "
+            "before it is discovered by a tax officer or before the next tax audit. "
+            "4. Aiding and abetting: "
+            "A person who aids, abets, counsels, or induces another person to commit a tax offence "
+            "shall, upon conviction, be liable for a penalty of 100% of the tax shortfall."
+        ),
+        "keywords": [
+            "penalty", "penalties", "false statement", "misleading", "fail to file",
+            "failure to file", "return", "maintain documents", "currency point",
+            "2.5%", "50%", "100%", "30%", "aiding", "abetting", "tax shortfall",
+            "voluntary disclosure", "10%", "body corporate",
+        ],
+    },
+
+    {
+        "topic": "Tax Offences",
+        "content": (
+            "Contravening the provisions of tax laws in Tanzania may result in criminal offences. "
+            "Offence procedures, conviction processes, and tax recovery mechanisms for various offences "
+            "are governed by the Tax Administration Act, 2023 (Cap. 438 R.E 2023). "
+            "Offences include, but are not limited to: failure to register, failure to maintain records, "
+            "making false or misleading statements, aiding and abetting tax evasion, and obstructing "
+            "a tax officer. Upon conviction, persons may face financial penalties and/or imprisonment "
+            "as prescribed in the Tax Administration Act."
+        ),
+        "keywords": [
+            "offence", "offences", "criminal", "conviction", "tax evasion", "obstruct",
+            "tax administration act", "imprisonment", "register", "false", "misleading",
+        ],
+    },
+
 ]
 
 
