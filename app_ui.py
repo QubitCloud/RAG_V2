@@ -128,9 +128,9 @@ HTML = r"""<!DOCTYPE html>
   {% endif %}
 
   <div id="welcome">
-    <div class="welcome-icon">&#128196;</div>
-    <h1>What do you need to know?</h1>
-    <p>Ask anything about your documents. Answers are sourced directly from your files.</p>
+    <div class="welcome-icon">&#128188;</div>
+    <h1>BRELA &amp; TRA Business Assistant</h1>
+    <p>Ask any question about business registration, licensing, or taxation in Tanzania. Answers are sourced directly from official BRELA and TRA documents.</p>
     <div class="suggestion-grid">
       {% for s in suggestions %}
       <div class="suggestion" onclick="useSuggestion(this)">{{ s }}</div>
@@ -142,7 +142,7 @@ HTML = r"""<!DOCTYPE html>
 
   <div class="input-wrap">
     <div class="input-row">
-      <textarea id="input" placeholder="Ask about your documents…" rows="1"
+      <textarea id="input" placeholder="Ask about business registration, licensing, or taxation…" rows="1"
         {% if not engine_ready %}disabled{% endif %}
         onkeydown="handleKey(event)" oninput="autoResize(this)"></textarea>
       <button class="send-btn" id="send-btn"

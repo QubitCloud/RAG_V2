@@ -356,7 +356,7 @@ textarea::placeholder{color:var(--ink3);font-style:italic}
 <header>
   <div class="header-top">
     <div class="masthead">
-      <span>Document Intelligence System</span>
+      <span>Business &amp; Taxation Reference System</span>
       {{ app_name }}
     </div>
     <div class="header-meta">
@@ -387,8 +387,8 @@ textarea::placeholder{color:var(--ink3);font-style:italic}
 
   <div id="welcome">
     <div class="welcome-divider">— ✦ —</div>
-    <div class="welcome-title">What shall we find<br>in your documents?</div>
-    <div class="welcome-sub">Type your query below, or select a prompt to begin.<br>All answers drawn directly from your documents.</div>
+    <div class="welcome-title">BRELA &amp; TRA<br>Business Assistant</div>
+    <div class="welcome-sub">Type your query below, or select a prompt to begin.<br>All answers drawn directly from official BRELA and TRA documents.</div>
     <div class="welcome-divider">- - - - - - - - - - - - - - - - - - - -</div>
     <div class="suggestion-grid">
       {% for s in suggestions %}
@@ -403,7 +403,7 @@ textarea::placeholder{color:var(--ink3);font-style:italic}
     <div class="input-prompt-row">
       <div class="prompt-gutter">&gt;</div>
       <textarea id="input"
-        placeholder="Type your query here..."
+        placeholder="Ask about business registration, licensing, or taxation..."
         rows="1"
         {% if not engine_ready %}disabled{% endif %}
         onkeydown="handleKey(event)"

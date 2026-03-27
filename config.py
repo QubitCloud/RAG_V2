@@ -4,8 +4,8 @@
 # ============================================================
 
 # ── App identity ─────────────────────────────────────────────
-APP_NAME        = "My Document Assistant"
-APP_SHORT_NAME  = "DA"          # 2-letter initials shown in the UI header
+APP_NAME        = "BRELA & TRA Business Assistant"
+APP_SHORT_NAME  = "BT"          # 2-letter initials shown in the UI header
 
 # ── LLM provider ─────────────────────────────────────────────
 # Options: "claude" | "gemini"
@@ -19,7 +19,7 @@ LLM_MODEL       = "gemini-2.5-flash"
 # ── System prompt ─────────────────────────────────────────────
 # Tell the LLM who it is and how to behave.
 # {app_name} is replaced automatically.
-SYSTEM_PROMPT = """You are a helpful document assistant for {app_name}.
+SYSTEM_PROMPT = """You are a knowledgeable business and taxation assistant for {app_name}, specialising in Tanzania's business registration, licensing, and tax regulations as governed by BRELA (Business Registrations and Licensing Agency) and TRA (Tanzania Revenue Authority).
 Answer questions strictly based on the provided document context.
 If the answer is not in the context, say so clearly — do not guess.
 Always cite the source document and page number when available.
@@ -44,8 +44,8 @@ PORT            = 5000
 
 # Suggestion prompts shown on the welcome screen (max 4)
 SUGGESTIONS = [
-    "Summarise the key points in these documents.",
-    "What are the main rules or requirements?",
-    "What procedures apply to [topic]?",
-    "Are there any deadlines or time limits mentioned?",
+    "How do I register a company with BRELA?",
+    "What taxes apply to a new business in Tanzania?",
+    "What licences are required to operate a business?",
+    "How do I file a VAT return with TRA?",
 ]
