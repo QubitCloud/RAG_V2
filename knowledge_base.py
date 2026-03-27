@@ -148,18 +148,65 @@ ENTRIES = [
     },
 
     {
-        "topic": "Withholding Tax",
+        "topic": "Withholding Tax — Introduction, Agents, and Payment Rules",
         "content": (
-            "Tanzania imposes withholding tax on certain payments. Key rates: "
-            "Dividends to residents: 5% (DSE-listed) / 10% (others). "
-            "Dividends to non-residents: 10%. "
-            "Interest to residents: 10%. Interest to non-residents: 10%. "
-            "Royalties to residents: 15%. Royalties to non-residents: 15%. "
-            "Service fees to non-residents: 15%. "
-            "Rent (land/buildings): 10% for individuals, 10% for entities. "
-            "The withholder must remit the tax to TRA by the 7th of the following month."
+            "Withholding tax is the amount of tax retained by one person (the Withholding Agent) "
+            "when making payments to another person (the Withholdee) for goods supplied or services rendered. "
+            "Payments subject to withholding tax include: employment income, investment returns "
+            "(dividends, interest, natural resource payments, rent, royalties), service fees, "
+            "contract payments, and payments for goods supplied to the Government and its institutions. "
+            "Payment deadline: Every withholding agent must pay any withheld income tax to the "
+            "Commissioner within 7 days after the end of each calendar month. "
+            "Withholding Tax Certificate: Certificates are obtained via the TRA Taxpayer Portal and "
+            "can be printed by the withholder or withholdee after payment is made. "
+            "Final WHT: The withholdee cannot claim any tax credit when calculating income tax payable. "
+            "Non-final WHT: The withholdee is entitled to a tax credit equal to the tax treated as paid "
+            "for the year of income in which the amount is derived."
         ),
-        "keywords": ["withholding", "wht", "dividend", "interest", "royalty", "rent", "non-resident"],
+        "keywords": [
+            "withholding", "wht", "withholding agent", "withholdee", "withholding tax certificate",
+            "final withholding", "non-final withholding", "7 days", "investment return",
+        ],
+    },
+
+    {
+        "topic": "Withholding Tax Rates — Full Table (Resident and Non-Resident)",
+        "content": (
+            "Withholding tax rates in Tanzania (Resident / Non-Resident): "
+            "Dividends — DSE-listed corporations: 5% / 5%. "
+            "Dividends — resident corporation to resident corporation (25%+ shareholding): 5% / N/A. "
+            "Dividends — other corporations: 10% / 10%. "
+            "Interest: 10% / 10%. "
+            "Royalties: 15% / 10%. "
+            "Other investment return payments: 15% / 15%. "
+            "Rental income (commercial purposes): 10% / 15%. "
+            "Technical service fees (mining): 10% / 20%. "
+            "Transport (non-resident operator/charterer without permanent establishment): N/A / 5%. "
+            "Insurance premium: N/A / 10%. "
+            "Commission for gaming advertisement and promotion: 10% / N/A. "
+            "Payments for purchase of salt: 2% / N/A. "
+            "VAT withholding on supply of goods (Section 5(5) VAT Act): 3% / N/A. "
+            "VAT withholding on supply of services (Section 5(5) VAT Act): 6% / N/A. "
+            "Payment on hiring of motor vehicle: 10% / N/A. "
+            "Sale of forest produce (single instalment): 2% of gross / N/A. "
+            "Natural resources payment: 15% / 15%. "
+            "Service fees: 5% / 15%. "
+            "Directors fees (non-full-time directors): 15% / 15%. "
+            "Commission to agents by service providers on mobile money transfers: 10% / N/A. "
+            "Goods supplied to Government and its institutions: 2% of gross / N/A. "
+            "Aircraft: 10% / 15%. "
+            "Payment to resident for verified carbon emission reductions: 10% / N/A. "
+            "Purchase of precious metals, gemstones from primary mining licence holder or artisanal miner: 2% / N/A. "
+            "Other assets: N/A / 15%."
+        ),
+        "keywords": [
+            "withholding", "wht", "rate", "dividend", "interest", "royalty", "rent",
+            "service fee", "technical service", "mining", "transport", "insurance",
+            "gaming commission", "salt", "vat withholding", "motor vehicle", "forest",
+            "natural resources", "director", "mobile money", "government supply",
+            "aircraft", "carbon", "precious metals", "gemstone", "artisanal",
+            "non-resident", "resident", "10%", "15%", "5%", "2%", "3%", "6%",
+        ],
     },
 
     # ── STARTING A BUSINESS ───────────────────────────────────────────────────
@@ -567,6 +614,87 @@ ENTRIES = [
             "stamp duty", "rate", "affidavit", "agreement", "lease", "memorandum",
             "partnership", "power of attorney", "transfer", "shares", "debenture",
             "mortgage", "property", "instrument", "tshs", "duty rate",
+        ],
+    },
+
+    # ── GAMING TAX ───────────────────────────────────────────────────────────
+
+    {
+        "topic": "Gaming Tax — Definition, Types, and Licensing",
+        "content": (
+            "Gaming activities means any game played with cards, dice, equipment, or any mechanical, "
+            "electromechanical or electronic device for money, property, checks, credit, or any "
+            "representative of value — including bingo, wheel of fortune, baccarat, slot machines, "
+            "horse racing, lottery, wager, banking or percentage games, and any other device approved "
+            "by the Gaming Board of Tanzania (GBT). "
+            "Gaming activities do NOT include card games played in private homes where no person "
+            "makes money for operating the game. "
+            "Gaming Tax is charged on six types of operations: "
+            "(1) Casinos (land-based and online/internet); "
+            "(2) Sports Betting; "
+            "(3) SMS Lottery; "
+            "(4) National Lottery; "
+            "(5) Slots / Route Operations; "
+            "(6) Forty Machines Site. "
+            "GBT issues licences to operators on a yearly basis. "
+            "Gaming operators must register for a TIN and comply with the Tax Administration Act "
+            "regarding document maintenance, tax liability, collection, interest, enforcement, "
+            "objection, and appeal."
+        ),
+        "keywords": [
+            "gaming", "casino", "sports betting", "lottery", "slot", "bingo",
+            "gaming tax", "gbt", "gaming board", "betting", "wager", "forty machine",
+        ],
+    },
+
+    {
+        "topic": "Gaming Tax — Rates and Filing Frequency",
+        "content": (
+            "Gaming Tax rates and return filing frequency in Tanzania: "
+            "Land-Based Casino: 18% on Gross Gaming Revenue (GGR) + 13% on Net Winnings — Weekly returns. "
+            "Online/Internet Casino: 25% on GGR + 15% on Net Winnings — Monthly returns. "
+            "Sports Betting: 25% on GGR + 12% on Net Winnings — Monthly returns. "
+            "SMS Lottery: 25% on GGR + 15% on Net Winnings — Monthly returns. "
+            "National Lottery: 20% on GGR + 15% on Net Winnings — Monthly returns. "
+            "Virtual Games: 10% on GGR + 15% on Net Winnings — Monthly returns. "
+            "Slots / Route Operations: TZS 100,000 per machine — Monthly returns. "
+            "Forty Machines Site: 25% on GGR — Monthly returns. "
+            "Note: Land-based casino returns are filed weekly; all others are filed monthly."
+        ),
+        "keywords": [
+            "gaming tax", "rate", "casino", "sports betting", "lottery", "slot",
+            "gross gaming revenue", "ggr", "net winnings", "weekly", "monthly",
+            "virtual games", "forty machine", "18%", "25%", "20%", "10%",
+        ],
+    },
+
+    {
+        "topic": "Gaming Tax — Payment Process and GFS Codes",
+        "content": (
+            "Gaming tax payment process: "
+            "Step 1 — Register for payment on the Revenue Gateway System (RGS) to obtain an order "
+            "form with a control number. "
+            "Step 2 — Submit the signed order form with control number to a Commercial Bank. "
+            "Step 3 — The bank posts the payment to the designated TRA bank account. "
+            "Threshold: Payments below TZS 5 million may be posted to a Commercial Bank account. "
+            "Payments of TZS 5 million and above must be transacted through TISS to the Bank of Tanzania (BOT) account. "
+            "GFS Codes for gaming tax payments: "
+            "Sports Betting on Stakes (Sales): GFS 11440107. "
+            "Sports Betting on Winnings: GFS 11440108. "
+            "Slots (Route) Operation: GFS 11440109. "
+            "SMS Lotteries: GFS 11440110. "
+            "National Lotteries: GFS 11440111. "
+            "Casino on GGR: GFS 11440112. "
+            "Casino Winnings: GFS 11440113. "
+            "Forty Machines Site: GFS 11440114. "
+            "Virtual Games — GGR: GFS 11440115. "
+            "Virtual Games — Winnings: GFS 11440116."
+        ),
+        "keywords": [
+            "gaming tax", "payment", "gfs code", "rgs", "revenue gateway", "control number",
+            "tiss", "bot", "bank of tanzania", "commercial bank", "5 million",
+            "11440107", "11440108", "11440109", "11440110", "11440111",
+            "11440112", "11440113", "11440114", "11440115", "11440116",
         ],
     },
 
