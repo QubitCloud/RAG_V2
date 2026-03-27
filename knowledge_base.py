@@ -147,6 +147,148 @@ ENTRIES = [
         "keywords": ["withholding", "wht", "dividend", "interest", "royalty", "rent", "non-resident"],
     },
 
+    # ── STARTING A BUSINESS ───────────────────────────────────────────────────
+
+    {
+        "topic": "Starting a Business as an Individual — TIN & Business Licence Steps",
+        "content": (
+            "An individual (resident or non-resident) must first obtain a Taxpayer Identification Number (TIN) "
+            "from TRA by visiting www.tra.go.tz. The Online TIN application form is available at "
+            "https://taxpayerportal.tra.go.tz. Required identification: National ID, Passport, or Voter ID. "
+            "For business TIN purposes, the individual must visit a TRA office with: "
+            "(1) a letter from a local government leader, and "
+            "(2) a lease agreement for the business location. "
+            "Once the TIN certificate is issued, the taxpayer undergoes a tax assessment interview. "
+            "After fulfilling tax obligations, a Tax Clearance Certificate is issued. "
+            "This Tax Clearance is required to obtain a Business Licence from the Trade Office at "
+            "the District, Municipal, or City level, or from the Ministry of Industry and Trade, "
+            "depending on the type of business."
+        ),
+        "keywords": [
+            "individual", "start", "starting", "sole", "tin", "business licence",
+            "tax clearance", "resident", "non-resident", "trade office", "how to start",
+        ],
+    },
+
+    {
+        "topic": "Resident Individual — Definition for Tax Purposes",
+        "content": (
+            "An individual is considered a tax resident of Tanzania for a year of income if they: "
+            "(1) Have a permanent home in Tanzania and are present in Tanzania during any part of the year; "
+            "(2) Are present in Tanzania for periods totalling 183 days or more during the year of income; "
+            "(3) Are present in Tanzania and in each of the two preceding years for periods averaging "
+            "more than 122 days per year; or "
+            "(4) Are an employee or official of the Government of Tanzania posted abroad during the year."
+        ),
+        "keywords": [
+            "resident", "residency", "183 days", "122 days", "tax resident",
+            "individual resident", "permanent home", "posted abroad",
+        ],
+    },
+
+    {
+        "topic": "Individual — Registering a Business Name with BRELA",
+        "content": (
+            "An individual may optionally register their business name with BRELA "
+            "(Business Registration and Licensing Authority), an agency under the Ministry of Industry and Trade. "
+            "The business name registration can be done before or after applying for a TIN. "
+            "Once registered, the business name will appear on the TIN certificate alongside the "
+            "individual's name in the format: '[Owner Name] trading as (T/A) [Business Name]'."
+        ),
+        "keywords": [
+            "business name", "brela", "register name", "individual", "sole trader",
+            "trading as", "t/a", "certificate of registration",
+        ],
+    },
+
+    {
+        "topic": "Starting a Business as a Limited Company (Corporation)",
+        "content": (
+            "To establish a limited company in Tanzania: "
+            "Step 1 — Apply for a Certificate of Incorporation from BRELA. Directors must prepare "
+            "a Memorandum and Articles of Association. "
+            "Step 2 — Submit to BRELA: the Memorandum and Articles of Association, a lease agreement "
+            "or title deed, and an introductory letter from the local authority. "
+            "Step 3 — After BRELA registration, register on the TRA Taxpayer Portal, conduct a tax "
+            "assessment, and submit returns for Income Tax, PAYE, and SDL. "
+            "Step 4 — Upon meeting tax obligations, obtain a Tax Clearance Certificate. "
+            "Step 5 — Use the Tax Clearance to obtain licences from other relevant business authorities."
+        ),
+        "keywords": [
+            "company", "limited", "corporation", "incorporate", "incorporation",
+            "certificate of incorporation", "directors", "memorandum", "articles of association",
+            "start company", "register company",
+        ],
+    },
+
+    {
+        "topic": "Starting a Business as a Partnership",
+        "content": (
+            "To establish a partnership in Tanzania: "
+            "Step 1 — Register the firm with BRELA and obtain a Certificate of Registration. "
+            "Step 2 — Visit TRA with the partnership deed, which must state the names of all partners "
+            "and their respective profit-sharing ratios. "
+            "Step 3 — To apply for a TIN for the partnership, submit: the BRELA Certificate of "
+            "Registration, the partnership deed, a lease agreement or title deed, and an introduction "
+            "letter from the local authority. "
+            "Step 4 — Each partner must individually apply for a personal TIN. If a partner already "
+            "holds a TIN obtained for another purpose, that existing TIN must be used — a new application "
+            "is not permitted."
+        ),
+        "keywords": [
+            "partnership", "partners", "partner", "firm", "partnership deed",
+            "profit sharing", "register partnership", "start partnership",
+        ],
+    },
+
+    {
+        "topic": "Starting a Business as a Trust",
+        "content": (
+            "A trust is a legal framework in which trustees manage assets separately from a partnership "
+            "or corporation. To establish a trust for business purposes in Tanzania: "
+            "Step 1 — Register with RITA (Registration, Insolvency and Trusteeship Agency) to obtain "
+            "a Certificate of Registration. "
+            "Step 2 — Create a trust deed listing the names and addresses of all trustees. "
+            "Step 3 — Each trustee must apply for an individual TIN. If a trustee already holds a TIN "
+            "obtained for another purpose, that existing TIN must be used — a new application is not permitted."
+        ),
+        "keywords": [
+            "trust", "trustee", "trustees", "trust deed", "rita", "register trust",
+            "start trust", "assets",
+        ],
+    },
+
+    {
+        "topic": "Registration of Aid Organisations",
+        "content": (
+            "An aid organisation is classified separately for tax purposes in Tanzania. "
+            "The process is as follows: "
+            "Step 1 — Obtain the necessary permit from the Ministry of Internal Affairs. "
+            "Step 2 — Proceed with TIN registration via the TRA Taxpayer Portal, using the account "
+            "of one of the organisation's authorised representatives."
+        ),
+        "keywords": [
+            "aid", "aid organisation", "ngo", "ministry of internal affairs",
+            "permit", "charitable", "organisation",
+        ],
+    },
+
+    {
+        "topic": "TIN Registration for Religious Institutions and Economic Groups",
+        "content": (
+            "Religious institutions and economic groups may apply for a TIN for tax purposes. "
+            "Requirements: "
+            "(1) A permit or introduction letter from their registered organisation, OR "
+            "(2) A certificate of group registration from the District or Municipal authority. "
+            "Registration is completed through the TRA Taxpayer Portal using the account of one "
+            "of the group's authorised representatives."
+        ),
+        "keywords": [
+            "religious", "church", "mosque", "institution", "economic group",
+            "group registration", "district", "municipal", "tin", "permit",
+        ],
+    },
+
 ]
 
 
