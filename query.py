@@ -19,6 +19,7 @@ import faiss
 
 from config import (INDEX_DIR, TOP_K, LLM_PROVIDER, LLM_MODEL,
                     SYSTEM_PROMPT, APP_NAME, EMBED_MODEL)
+import knowledge_base as kb
 
 
 def strip_markdown(text: str) -> str:
@@ -113,8 +114,16 @@ class RAGEngine:
             for c in chunks:
                 print(f"  • {c['source']} p.{c['page']}  score={c['score']:.2f}")
 
+        kb_entries  = kb.search(question)
+        kb_context  = kb.format_entries(kb_entries)
+
+        full_context = (
+            (f"KNOWLEDGE BASE:\n\n{kb_context}\n\n---\n\n" if kb_context else "")
+            + f"DOCUMENT CONTEXT:\n\n{context}"
+        )
+
         user_msg = (
-            f"DOCUMENT CONTEXT:\n\n{context}\n\n"
+            f"{full_context}\n\n"
             f"---\n\nQUESTION: {question}"
         )
         return _call_llm(self.client, self.system, user_msg)

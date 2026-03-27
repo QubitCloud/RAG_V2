@@ -1,0 +1,170 @@
+"""
+knowledge_base.py
+-----------------
+Manual knowledge entries for BRELA & TRA topics not covered by uploaded PDFs.
+
+HOW TO ADD AN ENTRY:
+    {
+        "topic":    "Short title for this entry",
+        "content":  "The full explanation, rules, or instructions.",
+        "keywords": ["word1", "word2", ...]   # words that trigger this entry
+    }
+
+Keywords are matched against the user's question (case-insensitive).
+An entry is included in the context if ANY of its keywords appear in the question.
+"""
+
+ENTRIES = [
+
+    # ── BRELA ────────────────────────────────────────────────────────────────
+
+    {
+        "topic": "BRELA Online Registration Portal",
+        "content": (
+            "BRELA's online business registration portal is accessible at "
+            "https://ors.brela.go.tz. New users must create an account before "
+            "submitting any registration application. All submissions, payments, "
+            "and certificate downloads are handled through this portal."
+        ),
+        "keywords": ["brela", "portal", "online", "register", "registration", "website", "ors"],
+    },
+
+    {
+        "topic": "Company Name Reservation",
+        "content": (
+            "Before registering a company, applicants must reserve a company name "
+            "through BRELA. A name reservation is valid for 30 days. The reservation "
+            "fee is TZS 10,000. The proposed name must not be identical or similar to "
+            "an already registered entity and must not contain restricted words such as "
+            "'Government', 'National', or 'Bank' without prior approval."
+        ),
+        "keywords": ["name", "reservation", "reserve", "company name", "brela"],
+    },
+
+    {
+        "topic": "Types of Business Entities Registered by BRELA",
+        "content": (
+            "BRELA registers the following types of business entities in Tanzania: "
+            "1. Private Limited Company (Ltd) — minimum 1 shareholder, maximum 50. "
+            "2. Public Limited Company (PLC) — minimum 7 shareholders, no maximum. "
+            "3. Sole Proprietorship — single owner, registered as a business name. "
+            "4. Partnership — 2 to 20 partners. "
+            "5. Branch of a Foreign Company — must register within 1 month of establishing "
+            "a place of business in Tanzania. "
+            "6. Trust, Society, and NGO registrations are also handled by BRELA."
+        ),
+        "keywords": ["type", "entity", "sole", "partnership", "limited", "company", "branch", "foreign", "ngo", "trust"],
+    },
+
+    {
+        "topic": "Business Licence (BRELA) vs Trade Licence",
+        "content": (
+            "BRELA handles business registration (issuing a Certificate of Incorporation "
+            "or Business Name Certificate). A separate Trade Licence is required from the "
+            "relevant Local Government Authority (LGA) where the business operates. "
+            "BRELA registration does not replace the Trade Licence requirement."
+        ),
+        "keywords": ["licence", "license", "trade", "lga", "local government", "permit"],
+    },
+
+    # ── TRA ──────────────────────────────────────────────────────────────────
+
+    {
+        "topic": "TIN Registration",
+        "content": (
+            "Every business entity in Tanzania must obtain a Taxpayer Identification Number "
+            "(TIN) from TRA. TIN registration is free of charge and can be done online at "
+            "https://www.tra.go.tz or at any TRA office. Required documents include: "
+            "Certificate of Incorporation (or Business Name Certificate), Memorandum and "
+            "Articles of Association, and national IDs of directors/owners. "
+            "TIN must be obtained before commencing any taxable activity."
+        ),
+        "keywords": ["tin", "taxpayer", "identification", "number", "tax registration", "tra"],
+    },
+
+    {
+        "topic": "VAT Registration Threshold",
+        "content": (
+            "VAT registration with TRA is mandatory when a business's annual taxable turnover "
+            "reaches or is expected to reach TZS 200 million. Voluntary registration is allowed "
+            "below this threshold. Once registered, businesses must charge VAT at the standard "
+            "rate of 18% on taxable supplies, file monthly VAT returns by the last working day "
+            "of the following month, and remit VAT collected to TRA."
+        ),
+        "keywords": ["vat", "value added tax", "threshold", "register", "200 million", "18%"],
+    },
+
+    {
+        "topic": "Corporate Income Tax Rate",
+        "content": (
+            "The standard corporate income tax rate in Tanzania is 30% of net taxable profit. "
+            "Newly listed companies on the Dar es Salaam Stock Exchange (DSE) enjoy a reduced "
+            "rate of 25% for three years. Resident companies pay tax on worldwide income; "
+            "non-resident companies pay tax only on Tanzania-source income. "
+            "Tax returns must be filed within 6 months after the end of the accounting period."
+        ),
+        "keywords": ["corporate", "income tax", "rate", "30%", "profit", "tax return", "company tax"],
+    },
+
+    {
+        "topic": "Pay As You Earn (PAYE)",
+        "content": (
+            "Employers in Tanzania are required to deduct PAYE from employee salaries and remit "
+            "it to TRA by the 7th of the following month. The PAYE bands (2024/25) are: "
+            "0 – 270,000 TZS/month: 0%. "
+            "270,001 – 520,000: 8%. "
+            "520,001 – 760,000: 20%. "
+            "760,001 – 1,000,000: 25%. "
+            "Above 1,000,000: 30%. "
+            "Employers must also file a monthly PAYE return via the TRA online portal."
+        ),
+        "keywords": ["paye", "pay as you earn", "payroll", "salary", "employee", "employer", "deduction", "withholding"],
+    },
+
+    {
+        "topic": "Skills and Development Levy (SDL)",
+        "content": (
+            "The Skills and Development Levy (SDL) is charged at 4% of the total gross monthly "
+            "payroll (excluding casual labourers). It is payable by employers with 4 or more "
+            "employees. SDL is remitted to TRA by the 7th of the following month together with PAYE. "
+            "SDL funds vocational training through the Vocational Education and Training Authority (VETA)."
+        ),
+        "keywords": ["sdl", "skills", "development", "levy", "payroll", "veta", "training"],
+    },
+
+    {
+        "topic": "Withholding Tax",
+        "content": (
+            "Tanzania imposes withholding tax on certain payments. Key rates: "
+            "Dividends to residents: 5% (DSE-listed) / 10% (others). "
+            "Dividends to non-residents: 10%. "
+            "Interest to residents: 10%. Interest to non-residents: 10%. "
+            "Royalties to residents: 15%. Royalties to non-residents: 15%. "
+            "Service fees to non-residents: 15%. "
+            "Rent (land/buildings): 10% for individuals, 10% for entities. "
+            "The withholder must remit the tax to TRA by the 7th of the following month."
+        ),
+        "keywords": ["withholding", "wht", "dividend", "interest", "royalty", "rent", "non-resident"],
+    },
+
+]
+
+
+def search(question: str) -> list[dict]:
+    """Return knowledge base entries whose keywords appear in the question."""
+    q = question.lower()
+    matched = []
+    for entry in ENTRIES:
+        if any(kw.lower() in q for kw in entry["keywords"]):
+            matched.append(entry)
+    return matched
+
+
+def format_entries(entries: list[dict]) -> str:
+    """Format matched entries as context text."""
+    if not entries:
+        return ""
+    parts = []
+    for e in entries:
+        parts.append(f"[Knowledge Base — {e['topic']}]\n{e['content']}")
+    return "\n\n---\n\n".join(parts)
