@@ -106,7 +106,7 @@ class RAGEngine:
             )
         return "\n\n---\n\n".join(parts)
 
-    def ask(self, question: str, verbose: bool = False) -> str:
+    def ask(self, question: str, verbose: bool = False) -> dict:
         chunks  = self.retrieve(question)
         context = self.build_context(chunks)
 
@@ -114,8 +114,11 @@ class RAGEngine:
             for c in chunks:
                 print(f"  • {c['source']} p.{c['page']}  score={c['score']:.2f}")
 
-        kb_entries  = kb.search(question)
-        kb_context  = kb.format_entries(kb_entries)
+        kb_entries = kb.search(question)
+        kb_context = kb.format_entries(kb_entries)
+
+        if verbose and kb_entries:
+            print(f"  [KB] {len(kb_entries)} knowledge base entry/entries matched.")
 
         full_context = (
             (f"KNOWLEDGE BASE:\n\n{kb_context}\n\n---\n\n" if kb_context else "")
@@ -126,4 +129,9 @@ class RAGEngine:
             f"{full_context}\n\n"
             f"---\n\nQUESTION: {question}"
         )
-        return _call_llm(self.client, self.system, user_msg)
+
+        answer  = _call_llm(self.client, self.system, user_msg)
+        sources = [{"source": c["source"], "page": c["page"]} for c in chunks]
+        kb_used = [e["topic"] for e in kb_entries]
+
+        return {"answer": answer, "sources": sources, "kb_used": kb_used}

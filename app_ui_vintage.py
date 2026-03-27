@@ -545,11 +545,8 @@ def ask():
         return jsonify({"error": "No question provided."}), 400
 
     try:
-        chunks  = engine.retrieve(question)
-        context = engine.build_context(chunks)
-        answer  = engine.ask(question)
-        sources = [{"source": c["source"], "page": c["page"]} for c in chunks]
-        return jsonify({"answer": answer, "sources": sources})
+        result  = engine.ask(question)
+        return jsonify({"answer": result["answer"], "sources": result["sources"]})
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 
