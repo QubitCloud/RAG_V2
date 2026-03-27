@@ -124,12 +124,27 @@ ENTRIES = [
     {
         "topic": "Skills and Development Levy (SDL)",
         "content": (
-            "The Skills and Development Levy (SDL) is charged at 4% of the total gross monthly "
-            "payroll (excluding casual labourers). It is payable by employers with 4 or more "
-            "employees. SDL is remitted to TRA by the 7th of the following month together with PAYE. "
-            "SDL funds vocational training through the Vocational Education and Training Authority (VETA)."
+            "SDL is a levy imposed under Section 14 of the Vocational Education Training Act, Cap. 82, "
+            "and collected by TRA. "
+            "Who pays: Any employer with 10 or more employees must pay SDL. "
+            "Rate: 3.5% of total gross emoluments paid to all employees during the month. "
+            "Gross emoluments include: salaries, wages, payments in lieu of leave, fees, commissions, "
+            "bonuses, gratuity, and allowances (subsistence, travel, entertainment, etc.). "
+            "Employees covered: permanent, part-time, secondary, and casual labourers. "
+            "Payment and filing: SDL is paid using form ITX 300.01.E and a monthly return must be "
+            "submitted to TRA on or before the 7th of the following month. "
+            "A half-year certificate reconciling monthly returns must also be prepared and remitted. "
+            "Exempt from SDL: Government departments wholly financed by Government; Diplomatic Missions; "
+            "UN and its organisations; international aid/technical assistance bodies; religious institutions "
+            "whose employees solely administer worship, give religious instruction, or provide public health; "
+            "charitable organisations; registered educational institutions (nursery to university); "
+            "local government authorities; intern students under TESLA programme; "
+            "farm employers whose employees are directly and solely engaged in farming."
         ),
-        "keywords": ["sdl", "skills", "development", "levy", "payroll", "veta", "training"],
+        "keywords": [
+            "sdl", "skills", "development", "levy", "payroll", "veta", "training",
+            "3.5%", "emoluments", "itx 300", "10 employees",
+        ],
     },
 
     {
@@ -286,6 +301,129 @@ ENTRIES = [
         "keywords": [
             "religious", "church", "mosque", "institution", "economic group",
             "group registration", "district", "municipal", "tin", "permit",
+        ],
+    },
+
+    # ── OBJECTIONS & APPEALS ─────────────────────────────────────────────────
+
+    {
+        "topic": "Tax Objections — Procedure and Requirements",
+        "content": (
+            "Governed by the Tax Administration Act No. 438 R.E 2023 and Tax Revenue Appeals Act, "
+            "Cap. 408 R.E 2023. "
+            "A taxpayer who believes the Commissioner General misapplied the law, reached an incorrect "
+            "factual finding, abused his powers, was biased, or improperly considered or ignored evidence "
+            "may object to the assessment. "
+            "Procedure: File a written Notice of Objection to the Commissioner General within 30 days "
+            "of the date the tax decision was served. The notice must state the grounds of objection and "
+            "be accompanied by all relevant documents the taxpayer intends to rely on. "
+            "Payment condition: The objection is not admitted unless the taxpayer has paid whichever "
+            "is greater — the tax not in dispute OR one-third of the assessed tax. "
+            "Waiver: A taxpayer may apply within 15 days of the tax decision for the Commissioner General "
+            "to reduce or waive the required payment amount, if good reason exists. "
+            "Suspension: Once a valid objection is filed and the statutory payment made, liability for "
+            "the remaining assessed tax is suspended until the objection is finally determined. "
+            "Extension of time: A taxpayer may apply for an extension within 7 days before the 30-day "
+            "deadline. The extension granted shall not exceed 30 days. "
+            "Where to lodge: Regional TRA office where the taxpayer is registered; Commissioner for "
+            "Customs and Excise; Commissioner for Large Taxpayers; or Commissioner for Domestic Revenue."
+        ),
+        "keywords": [
+            "objection", "object", "dispute", "assessment", "notice of objection",
+            "30 days", "tax decision", "commissioner general", "tax administration act",
+            "one third", "disputed", "waiver", "extension",
+        ],
+    },
+
+    {
+        "topic": "Tax Appeals — Board, Tribunal, and Court of Appeal",
+        "content": (
+            "There are three levels of appeal for tax disputes in Tanzania: "
+
+            "1. Tax Revenue Appeals Board: "
+            "Any person aggrieved by the Commissioner General's final determination may appeal to the Board. "
+            "Conditions: (a) serve notice of appeal on the Commissioner General within 30 days of the "
+            "final determination notice; (b) lodge the appeal with the Board within 45 days of the "
+            "final determination notice; (c) the notice must include full details of the assessment and "
+            "all correspondence with the Commissioner General. "
+
+            "2. Tax Revenue Appeals Tribunal: "
+            "Any party aggrieved by a Board decision may appeal to the Tribunal. "
+            "Conditions: serve notice of intention to appeal on the opposite party within 15 days of "
+            "the Board's decision; lodge the appeal within 30 days of the Board's decision. "
+
+            "3. Court of Appeal: "
+            "Any person aggrieved by a Tribunal decision may appeal to the Court of Appeal. "
+            "Appeals to the Court of Appeal lie on questions of law only. "
+            "The Appellate Jurisdiction Act and Court of Appeal Rules apply. "
+
+            "Note: Any tax deposited as required during the objection/appeal process remains deposited "
+            "with the Commissioner General pending the final determination of the appeal at all levels. "
+            "The Board or Tribunal may extend time limits where the failure to appeal was caused by "
+            "absence from Tanzania, sickness, or other reasonable cause."
+        ),
+        "keywords": [
+            "appeal", "board", "tribunal", "court of appeal", "tax revenue appeals",
+            "45 days", "30 days", "15 days", "aggrieved", "final determination",
+            "tax revenue appeals act", "questions of law",
+        ],
+    },
+
+    # ── EFD / VFD ─────────────────────────────────────────────────────────────
+
+    {
+        "topic": "Electronic Fiscal Devices (EFD) and Virtual Fiscal Devices (VFD) — Overview",
+        "content": (
+            "EFD (Electronic Fiscal Device): A physical receipt-issuing machine authorised by the "
+            "Commissioner General for use in business transactions. "
+            "VFD (Virtual Fiscal Device): A cloud-based software system approved by the Commissioner "
+            "General to capture, transmit, and store sales data electronically. "
+            "Both EFD and VFD serve the same purposes: improving business record quality, reducing "
+            "tax evasion, ensuring fairness in tax assessment, minimising tax disputes, and enabling "
+            "real-time monitoring of business transactions. "
+            "Fiscal Receipt: A receipt or invoice issued using an EFD, the Government Electronic "
+            "Payment Gateway, or any other electronic system approved by the Commissioner General."
+        ),
+        "keywords": [
+            "efd", "vfd", "fiscal", "electronic fiscal device", "virtual fiscal device",
+            "fiscal receipt", "receipt machine", "invoice", "pos",
+        ],
+    },
+
+    {
+        "topic": "EFD/VFD — Obligation to Acquire and Use",
+        "content": (
+            "Any person who supplies goods or renders services, or receives payment for goods or services, "
+            "whose annual turnover is assessed at TZS 11 million or above, must acquire an EFD or VFD "
+            "and issue fiscal receipts or fiscal invoices for all transactions. "
+            "Rules for users: "
+            "(1) EFD/VFD may be purchased from any TRA-approved supplier. "
+            "(2) The device must not be transferred to any other person for any reason. "
+            "(3) The device must be available, visible, and accessible at the business premises at all times. "
+            "(4) If erroneous data is entered or the device fails for any reason, the user must report "
+            "the incident to the approved supplier AND the Commissioner General within 24 hours."
+        ),
+        "keywords": [
+            "efd", "vfd", "obligation", "acquire", "use", "11 million", "turnover",
+            "fiscal receipt", "issue receipt", "approved supplier", "24 hours", "report",
+        ],
+    },
+
+    {
+        "topic": "EFD/VFD — Approved Supplier Requirements",
+        "content": (
+            "An EFD/VFD supplier must be certified by the Commissioner General. Responsibilities include: "
+            "importing, distributing, and selling EFD/VFD devices; installing and configuring them; "
+            "training users; and providing after-sales support including repairs and maintenance. "
+            "Minimum requirements for approval as a supplier: "
+            "Capital: TZS 1.5 billion for EFD suppliers; TZS 50 million for VFD suppliers. "
+            "Technical team: Highly qualified staff to install, configure, train, and support users. "
+            "Experience: Minimum 5 years supplying fiscal devices or similar ICT equipment. "
+            "Any other requirements prescribed by the Commissioner General."
+        ),
+        "keywords": [
+            "efd supplier", "vfd supplier", "approved supplier", "certified", "1.5 billion",
+            "50 million", "capital requirement", "supplier", "install", "configure",
         ],
     },
 
