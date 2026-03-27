@@ -570,6 +570,116 @@ ENTRIES = [
         ],
     },
 
+    # ── PAYING TAXES — DUE DATES ─────────────────────────────────────────────
+
+    {
+        "topic": "Tax Payment Due Dates — Income Tax, VAT, PAYE, SDL, Excise, Digital Tax",
+        "content": (
+            "Due dates for payment of taxes and duties in Tanzania: "
+            "Withholding Tax: payable within 7 days after the end of the calendar month to which the tax relates. "
+            "PAYE: payable within 7 days after the end of the calendar month to which the tax relates. "
+            "SDL: payable within 7 days after the end of the calendar month to which the levy relates. "
+            "Excise Duty: payable within 25 days after the end of the calendar month to which it relates. "
+            "Digital Service Tax (DST): payable on or before the 20th day after the end of the calendar month. "
+            "VAT: due and payable on or before the 20th day of the month following the business month. "
+            "A VAT return must be submitted even if there is no net VAT payable for that period. "
+            "Provisional Tax (Installments): paid quarterly. For taxpayers whose accounting period ends "
+            "30 December, installments are due by end of March, June, September, and December. "
+            "Final Income Tax Return: filed and paid within 6 months after the end of the year of income. "
+            "Jeopardy Assessed Tax: payable on the date specified in the notice of assessment. "
+            "Adjusted Assessed Tax: payable within 30 days from the date of service of the assessment."
+        ),
+        "keywords": [
+            "due date", "pay tax", "payment date", "when to pay", "deadline",
+            "withholding", "paye", "sdl", "vat", "excise", "digital tax", "dst",
+            "provisional", "installment", "final return", "jeopardy", "adjusted assessment",
+            "7 days", "20th", "25 days", "quarterly", "6 months",
+        ],
+    },
+
+    {
+        "topic": "Extension of Time to Pay Tax",
+        "content": (
+            "A taxpayer may apply in writing to the Commissioner General for an extension of time to pay tax. "
+            "The Commissioner General may grant an extension if good cause is shown, and will serve the "
+            "applicant with a written notice of the decision. "
+            "If an extension is granted by allowing payment in instalments and the taxpayer defaults on "
+            "any instalment, the full outstanding balance of tax plus interest becomes immediately payable."
+        ),
+        "keywords": [
+            "extension", "extend", "time to pay", "instalment", "default",
+            "commissioner general", "apply", "good cause",
+        ],
+    },
+
+    {
+        "topic": "Income Tax for Transporters — Passenger Service Vehicles (Class A)",
+        "content": (
+            "Annual income tax for resident persons engaged in transporting passengers — Class A "
+            "(Passenger Service Vehicles): "
+            "Up to 5 passengers: TZS 120,000 per year. "
+            "6 to 15 passengers: TZS 250,000 per year."
+        ),
+        "keywords": [
+            "transporter", "transport", "passenger", "class a", "minibus", "daladala",
+            "vehicle tax", "income tax transport",
+        ],
+    },
+
+    {
+        "topic": "Income Tax for Transporters — Tour Service Vehicles (Class B)",
+        "content": (
+            "Annual income tax for resident persons engaged in transporting tourists — Class B "
+            "(Tour Service Vehicles): "
+            "Up to 15 tourists: TZS 650,000. "
+            "16 to 25 tourists: TZS 900,000. "
+            "26 to 45 tourists: TZS 1,300,000. "
+            "46 to 65 tourists: TZS 1,800,000. "
+            "Above 65 tourists: TZS 2,400,000."
+        ),
+        "keywords": [
+            "transporter", "tour", "tourist", "class b", "safari", "vehicle tax",
+            "income tax transport", "tour vehicle",
+        ],
+    },
+
+    {
+        "topic": "Income Tax for Transporters — Goods Carrying Vehicles (Class C)",
+        "content": (
+            "Annual income tax for resident persons engaged in transporting goods — Class C "
+            "(Goods Carrying Vehicles): "
+            "Up to 500 kg: TZS 120,000. "
+            "Above 500 kg but less than 1 tonne: TZS 250,000. "
+            "1 to 5 tonnes: TZS 500,000. "
+            "6 to 10 tonnes: TZS 750,000. "
+            "11 to 15 tonnes: TZS 1,100,000. "
+            "16 to 20 tonnes: TZS 1,300,000. "
+            "21 to 25 tonnes: TZS 1,650,000. "
+            "26 to 30 tonnes: TZS 1,900,000. "
+            "More than 30 tonnes: TZS 2,200,000."
+        ),
+        "keywords": [
+            "transporter", "goods", "cargo", "freight", "lorry", "truck", "class c",
+            "tonnes", "capacity", "vehicle tax", "income tax transport",
+        ],
+    },
+
+    {
+        "topic": "Income Tax for Transporters — Private Hire Service Vehicles (Class D)",
+        "content": (
+            "Annual income tax for resident persons engaged in private hire transport — Class D "
+            "(Private Hire Service Vehicles): "
+            "Taxi: TZS 180,000. "
+            "Ride Hailing (e.g. Bolt, Uber): TZS 350,000. "
+            "Ride Sharing: TZS 450,000. "
+            "Special Hire: TZS 750,000."
+        ),
+        "keywords": [
+            "taxi", "ride hailing", "uber", "bolt", "ride sharing", "special hire",
+            "class d", "private hire", "vehicle tax", "income tax transport",
+        ],
+    },
+
 ]
 
 
