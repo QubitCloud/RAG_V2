@@ -289,6 +289,149 @@ ENTRIES = [
         ],
     },
 
+    # ── DIGITAL / ELECTRONIC SERVICES TAXES ──────────────────────────────────
+
+    {
+        "topic": "Digital Service Tax (DST) — Income Tax on Electronic Services",
+        "content": (
+            "Under the Income Tax Act, Cap. 332: "
+            "Section 89(m) establishes Tanzania as a source of income for payments made by individuals "
+            "(not conducting business) to non-residents for services rendered. "
+            "Section 90A requires non-resident persons to pay income tax at 2% on payments received "
+            "from individuals not conducting business, for services rendered through a digital marketplace. "
+            "Section 116(1) expands the scope to cover all electronic services, not only those via "
+            "digital marketplaces. "
+            "Section 116(2) sets the due date for DST return filing and payment as the 20th day of "
+            "the following month. "
+            "The DST rate is 2% of gross payments received. Input tax credit is not allowed. "
+            "Non-resident providers are exempt from using Electronic Fiscal Devices (EFD)."
+        ),
+        "keywords": [
+            "digital service tax", "dst", "electronic services", "non-resident", "digital marketplace",
+            "section 89", "section 90a", "section 116", "2%", "income tax act",
+        ],
+    },
+
+    {
+        "topic": "VAT on Electronic Services — Non-Resident Providers",
+        "content": (
+            "Under the Value Added Tax Act, Cap. 148: "
+            "Section 68(5) allows non-resident electronic service providers to register for VAT "
+            "without requiring a tax representative in Tanzania. "
+            "The VAT rate applicable is 18%. Input tax credit is not allowed. "
+            "Returns and payment are due by the 20th day of the following month "
+            "(per the VAT (Registration of Non-resident Electronic Service Providers) "
+            "Amendment Regulations, 2023). "
+            "Taxes must be paid to a designated bank account in Tanzanian Shillings or an equivalent "
+            "convertible currency at the Bank of Tanzania's prevailing exchange rate on the date of payment. "
+            "Non-resident providers are exempt from using Electronic Fiscal Devices (EFD)."
+        ),
+        "keywords": [
+            "vat", "electronic services", "non-resident", "section 68", "vat act",
+            "online services", "digital", "18%", "efd", "tax representative",
+        ],
+    },
+
+    {
+        "topic": "Registration for Non-Resident Electronic Service Providers (DST & VAT)",
+        "content": (
+            "The Income Tax (Registration of Non-resident Electronic Service Providers/Suppliers) "
+            "Regulations, 2022 and the VAT (Registration of Non-resident Electronic Service "
+            "Providers/Suppliers) Regulations, 2022 govern registration. "
+            "Regulation 4 of both sets of regulations requires eligible non-resident electronic "
+            "service providers or suppliers to apply online through the Commissioner General's "
+            "Simplified Online Registration Portal. "
+            "There is NO registration threshold — all qualifying non-residents must register "
+            "regardless of turnover. "
+            "Filing and payment of both DST and VAT returns must be done electronically."
+        ),
+        "keywords": [
+            "register", "non-resident", "electronic service", "registration portal",
+            "regulation 4", "simplified", "threshold", "dst", "vat", "2022 regulations",
+        ],
+    },
+
+    {
+        "topic": "Withholding Tax on Digital Content Creators and Digital Assets",
+        "content": (
+            "Introduced by the Finance Act, 2024 under the Income Tax Act, Cap. 332: "
+            "Section 83B: Any resident or non-resident making payments to resident digital content "
+            "creators must withhold tax at 5% on such payments. "
+            "Section 83C: Any resident or non-resident owning or facilitating a digital asset "
+            "exchange platform must withhold tax at 3% on payments made to resident persons for "
+            "the exchange or transfer of digital assets. "
+            "Additionally, the Finance Act, 2024 introduced a new definition of 'Online Data Services' "
+            "under Section 2 of the VAT Act, Cap. 148."
+        ),
+        "keywords": [
+            "digital content", "content creator", "digital asset", "crypto", "exchange",
+            "section 83b", "section 83c", "5%", "3%", "finance act 2024", "withholding",
+            "online data services",
+        ],
+    },
+
+    # ── STAMP DUTY ────────────────────────────────────────────────────────────
+
+    {
+        "topic": "Stamp Duty — Introduction and Scope",
+        "content": (
+            "The Stamp Duty Act consolidates and revises laws on stamp duty in Tanzania Mainland. "
+            "Any instrument specified in the schedule that is: "
+            "(a) executed in Tanzania Mainland, OR "
+            "(b) executed outside Tanzania Mainland but relates to property or a matter performed in Tanzania Mainland, "
+            "must be charged with stamp duty at the amount specified in the schedule, unless exempted. "
+            "Stamp duty is generally payable by the person drawing, making, or executing the instrument. "
+            "If a person is uncertain whether an instrument requires stamping or what amount is due, "
+            "they may refer the matter to the Stamp Duty Officer for adjudication."
+        ),
+        "keywords": [
+            "stamp duty", "instrument", "stamp", "adjudication", "stamp duty act",
+            "executed", "chargeable",
+        ],
+    },
+
+    {
+        "topic": "Stamp Duty — Time Limit for Stamping",
+        "content": (
+            "All chargeable instruments executed in Tanzania Mainland must be stamped within 30 days "
+            "of execution. "
+            "If the instrument is presented to a proper officer for adjudication, the period from "
+            "presentation until notification of the officer's decision is excluded from the 30-day count. "
+            "Receipts, acknowledgements of debt, promissory notes, and bills of exchange must be "
+            "stamped on the date of execution or the date shown on the instrument."
+        ),
+        "keywords": [
+            "stamp duty", "30 days", "time limit", "stamped", "adjudication",
+            "promissory note", "bill of exchange", "receipt",
+        ],
+    },
+
+    {
+        "topic": "Stamp Duty — Rates on Common Instruments",
+        "content": (
+            "Stamp duty rates on common instruments in Tanzania Mainland: "
+            "Affidavit (including affirmation or declaration): TZS 2,000. "
+            "Agreement or Memorandum of Agreement: TZS 2,000. "
+            "Agreement relating to Deposit of Title Deeds, Hypothecation, Pawn or Pledge: TZS 2,000. "
+            "Appraisement or Valuation (not under court order): TZS 500. "
+            "Exchange of Property: 0.5% on the first TZS 100,000, then 1% on the value exceeding TZS 100,000. "
+            "Lease (including sub-lease or agreement to let): 1% of the annual reserved rent, for all durations. "
+            "Memorandum of Association of a Company: TZS 10,000. "
+            "Instrument of Partnership — capital up to TZS 10,000: TZS 1,000; "
+            "capital TZS 100,001–1,000,000: TZS 5,000; any other case: TZS 10,000; "
+            "Dissolution of partnership: TZS 10,000. "
+            "Power of Attorney: TZS 2,000. "
+            "Transfer of shares in an incorporated company: 1% of the board-approved value. "
+            "Transfer of debentures: 1% of the board-approved value. "
+            "Transfer of interest secured by bond, mortgage-deed, or policy of insurance: 1% of value."
+        ),
+        "keywords": [
+            "stamp duty", "rate", "affidavit", "agreement", "lease", "memorandum",
+            "partnership", "power of attorney", "transfer", "shares", "debenture",
+            "mortgage", "property", "instrument", "tshs", "duty rate",
+        ],
+    },
+
 ]
 
 
