@@ -1,32 +1,71 @@
-# RAG Document Assistant — Generic Template
+# BRELA & TRA Business Assistant
 
-A reusable RAG (Retrieval-Augmented Generation) system.
-Ask questions against any set of PDF documents.
+A Retrieval-Augmented Generation (RAG) system for answering questions on business registration, licensing, and taxation in Tanzania — drawing from official BRELA and TRA documents.
 
 ---
 
-## The only file you need to edit: `config.py`
+## How it works
 
-Everything customisable lives there:
+1. PDF documents (BRELA/TRA regulations, guides, acts) are parsed, chunked, and embedded into a FAISS vector index.
+2. When a question is asked, the most relevant chunks are retrieved from the index.
+3. A built-in knowledge base (`knowledge_base.py`) supplements the PDFs with manually curated entries for topics not covered in documents.
+4. Both sources are passed to the LLM, which produces a cited answer.
 
+---
+
+## Files you can edit
+
+### `config.py` — app settings
 ```python
-APP_NAME       = "My Document Assistant"   # shown in the UI
-APP_SHORT_NAME = "DA"                      # 2-letter initials in header
+APP_NAME        = "BRELA & TRA Business Assistant"
+APP_SHORT_NAME  = "BT"
 
-LLM_PROVIDER   = "claude/ gemini"                  # "claude" or "gemini"
-LLM_MODEL      = "claude-sonnet-4-20250514"
+LLM_PROVIDER    = "gemini"           # "claude" or "gemini"
+LLM_MODEL       = "gemini-2.5-flash"
 
-SYSTEM_PROMPT  = "You are a helpful assistant for {app_name}..."
+SYSTEM_PROMPT   = "..."              # how the LLM should behave
 
-TOP_K          = 5       # chunks retrieved per query
-CHUNK_SIZE     = 400     # words per chunk
-CHUNK_OVERLAP  = 60
+TOP_K           = 15                 # chunks retrieved per query
+CHUNK_SIZE      = 800                # words per chunk
+CHUNK_OVERLAP   = 200
 
-SUGGESTIONS = [          # welcome screen buttons (max 4)
-    "What are the key rules?",
+SUGGESTIONS = [                      # welcome screen buttons (max 4)
+    "How do I register a company with BRELA?",
     ...
 ]
 ```
+
+### `knowledge_base.py` — manual knowledge entries
+
+Add entries for any BRELA/TRA topic not covered by your PDFs:
+
+```python
+{
+    "topic":    "Short title",
+    "content":  "Full explanation, rules, or instructions.",
+    "keywords": ["trigger", "words", "for", "this", "entry"],
+},
+```
+
+An entry is included in the LLM context when any of its keywords appear in the user's question.
+
+**Topics currently covered in the knowledge base:**
+
+| Category | Topics |
+|---|---|
+| BRELA | Online portal, name reservation, entity types, licence vs trade licence |
+| Starting a Business | Individual (TIN steps, residency rules, BRELA name registration), Limited Company, Partnership, Trust, Aid Organisations, Religious/Economic Groups |
+| TRA — Core Taxes | TIN registration, VAT threshold, Corporate income tax (30%), PAYE bands |
+| Withholding Tax | Agent/withholdee rules, full rates table (25+ categories, resident & non-resident) |
+| SDL | Rate (3.5%), 10+ employee threshold, gross emoluments, exemptions |
+| Paying Taxes | Due dates for all tax types, extension of time, transporter tax tables (Class A–D) |
+| Digital / Electronic Services | DST (2%), VAT for non-residents (18%), registration rules, WHT on digital content (5%) and digital assets (3%) |
+| Stamp Duty | Scope, 30-day stamping deadline, rates table |
+| Gaming Tax | 6 activity types, rates by type, GFS codes, payment process |
+| Objections & Appeals | Objection procedure (30 days, 1/3 payment rule), Board (45 days), Tribunal (30 days), Court of Appeal |
+| EFD / VFD | Definitions, TZS 11M obligation threshold, supplier requirements |
+| Charitable Organisations | Qualifying criteria, 5 required documents, private ruling process |
+| Interest, Penalties & Offences | Underestimation interest, late payment interest, document/filing/false statement penalties, aiding & abetting, offences |
 
 ---
 
@@ -37,12 +76,11 @@ SUGGESTIONS = [          # welcome screen buttons (max 4)
 pip install -r requirements.txt
 
 # 2. Set your API key
-export ANTHROPIC_API_KEY="sk-ant-..."   # if using Claude
 export GEMINI_API_KEY="AIza..."         # if using Gemini
+export ANTHROPIC_API_KEY="sk-ant-..."   # if using Claude
 
 # 3. Add PDFs
-mkdir docs
-# copy your PDF files into docs/
+# Copy BRELA/TRA PDF documents into the docs/ folder
 
 # 4. Build the index
 python ingest.py
@@ -50,6 +88,9 @@ python ingest.py
 # 5. Start the web UI
 python app_ui.py
 # Open http://localhost:5000
+
+# Or use the vintage UI
+python app_ui_vintage.py
 ```
 
 ---
@@ -59,22 +100,21 @@ python app_ui.py
 In `config.py`:
 
 ```python
+# Use Gemini (current default)
+LLM_PROVIDER = "gemini"
+LLM_MODEL    = "gemini-2.5-flash"
+
 # Use Claude
 LLM_PROVIDER = "claude"
-LLM_MODEL    = "claude-sonnet-4-20250514"
-
-# Use Gemini
-LLM_PROVIDER = "gemini"
-LLM_MODEL    = "gemini-2.0-flash"
+LLM_MODEL    = "claude-sonnet-4-6"
 ```
 
 No other files need to change.
 
 ---
 
-## Re-ingesting after adding new documents
+## Re-ingesting after adding new PDFs
 
-Just re-run:
 ```bash
 python ingest.py
 ```
@@ -85,23 +125,14 @@ Then restart `app_ui.py`.
 ## File structure
 
 ```
-rag/
-├── config.py          ← EDIT THIS — all your settings
-├── ingest.py          ← parse + embed + index (don't edit)
-├── query.py           ← retrieve + call LLM  (don't edit)
-├── app_ui.py          ← web interface        (don't edit)
+RAG/
+├── config.py             ← EDIT THIS — app settings and branding
+├── knowledge_base.py     ← EDIT THIS — manual knowledge entries
+├── ingest.py             ← parse + embed + index PDFs
+├── query.py              ← retrieve chunks + call LLM
+├── app_ui.py             ← modern dark web UI
+├── app_ui_vintage.py     ← vintage typewriter web UI
 ├── requirements.txt
-├── docs/              ← put your PDFs here
-└── index/             ← auto-generated by ingest.py
+├── docs/                 ← put your BRELA/TRA PDFs here
+└── index/                ← auto-generated by ingest.py
 ```
-
----
-
-## Example use cases
-
-| Use case | `APP_NAME` | `SYSTEM_PROMPT` hint |
-|---|---|---|
-| Legal contracts | Contract Review Tool | Flag obligations and deadlines |
-| HR policies | HR Policy Assistant | Be friendly, cite policy section |
-| Medical guidelines | Clinical Reference | Always recommend consulting a doctor |
-| Financial reports | Finance Document Q&A | Cite figures precisely |
